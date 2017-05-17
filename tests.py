@@ -22,8 +22,15 @@ class FooBarQixTests(unittest.TestCase):
 
     def test_should_return_a_combination_of_FooBarQix(self):
         self.assertEqual("FooQix", foobarqix(3*7))
-        self.assertEqual("BarQix", foobarqix(5*7))
-        self.assertEqual("FooBar", foobarqix(3*5))
-        self.assertEqual("FooBarQix", foobarqix(3*5*7))
-        
+        self.assertEqual("BarQix", foobarqix(5*7*4))
+        self.assertEqual("FooBar", foobarqix(3*5*4))
+        self.assertEqual("FooBarQix", foobarqix(3*5*7*4))
+    
+    def test_should_replace_3_by_Foo(self):
+        self.assertEqual("Foo", foobarqix(13))
 
+    def test_should_replace_5_by_Bar(self):
+        self.assertEqual("Bar", foobarqix(52))
+
+    def test_should_replace_7_by_Qix(self):
+        self.assertEqual("Qix", foobarqix(17))
