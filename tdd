@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while true
+do
+  python -m unittest discover
+  inotifywait -qr --event modify --event create --event move --event delete .
+done
