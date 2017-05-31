@@ -8,7 +8,7 @@ def foobarqix(number):
     return str(number)
 
 def replaceByDivisible(dico, number):
-    return [ value for divisor,value in dico.iteritems() if number % divisor == 0 ]
+    return [ value for divisor,value in dico.items() if number % divisor == 0 ]
 
 def replaceByContains(dico, number):
     return [ dico[int(digit)] for digit in str(number) if int(digit) in dico ]
